@@ -1,0 +1,30 @@
+#container{
+  position: relative;
+}
+.centerA{
+  display:block;
+  text-align:center;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+  background-color: black;
+}
+h1{
+  text-align:center;
+  color: white;
+}
+.whiteText{
+  color: white;
+}
+#leftSidebar{
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: auto;
+  height: 100px;
+  overflow: auto;
+}
