@@ -27,3 +27,11 @@ h1{
   height: auto;
   overflow: auto;
 }
+#leftsidebar{
+ position: relative;
+ display: inline-block;
+ margin: 1em 0.1em 0.1em 0.8%;
+ padding: 0.1em;
+ background: #ebebfb;
+ border: 2px solid blue;
+}
