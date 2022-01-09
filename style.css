@@ -27,7 +27,7 @@ h1{
   height: auto;
   overflow: auto;
 }
-#leftSidebar, #container{
+#leftSidebar, #Breakout{
  position: relative;
  display: inline-block;
  margin: 1em 0.1em 0.1em 0.8%;
