@@ -19,18 +19,14 @@ h1{
 .whiteText{
   color: white;
 }
-#leftSidebar{
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  position: auto;
-  height: auto;
-  overflow: auto;
-}
+
 #leftSidebar, #container{
  position: relative;
  display: inline-block;
  margin: 1em 0.1em 0.1em 0.8%;
  width: 50%;
  padding: 0.1em;
+ position: auto;
+ height: auto;
+ overflow: auto;
 }
