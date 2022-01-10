@@ -30,3 +30,9 @@ h1{
  height: auto;
  overflow: auto;
 }
+#wrapper{
+ display: flex;
+ flex-direction: row;
+ justify-content: center; 
+ align-items: center;
+}
