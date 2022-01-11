@@ -25,6 +25,7 @@ h1{
  flex-direction: row;
  justify-content: center; 
  align-items: center;
+ min-width: 30%
 }
 
 #logo{
