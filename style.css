@@ -28,10 +28,8 @@ h1{
 }
 
 #logo{
-  display: flex;
-  flex-direction: row;
-  justify-content: center; 
-  align-items: center;
+  margin: auto;
+  display: block;
   width: 400px;
-  height: 350px;
+  height: 325px;
 }
