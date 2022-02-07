@@ -1,0 +1,49 @@
+[
+    {
+        "name": "A New Beginning",
+        "description": "Earth is a wasteland. You built a space ship, but now food is running out. A tiny world is your only hope.",
+        "link": "theLostShip"
+    },
+    {
+        "name": "An Interworld City",
+        "description": "When a world turns out to be way too small, you decide to build a city that crosses worlds.",
+        "link": "multipleWorlds",
+        "requirements": ["theLostShip"]
+    },
+    {
+        "name": "Computerization",
+        "description": "Use computers to modernize a city.",
+        "link": "computerization",
+        "requirements": ["thisIsNotFinished"]
+    },
+    {
+        "name": "Free Play - Mega World",
+        "description": "Build the city of your dreams on this huge world!",
+        "link": "FreePlayMegaWorld"
+    },
+    {
+        "name": "Free Play - Random Archipelago",
+        "description": "Construct a complex city on this random clique of worlds.",
+        "link": "FreePlayManyWorldsRandom"
+    },
+    {
+        "name": "Free Play - Empty Canvas",
+        "description": "A huge, barren world that you can furnish to your desire, plus some small worlds filled with resources.",
+        "link": "FreePlayEmptyCanvas"
+    },
+    {
+        "name": "Free Play - Divided",
+        "description": "Mind the gap! It separates forests and rocks.",
+        "link": "FreePlayDivided"
+    },
+    {
+        "name": "Free Play - Random Mini Worlds",
+        "description": "Countless tiny worlds, randomly placed in space.",
+        "link": "FreePlayRandomMiniWorlds"
+    },
+    {
+        "name": "Free Play - Archipelago Classic",
+        "description": "Construct a complex city on this clique of worlds.",
+        "link": "FreePlayManyWorlds"
+    }
+]

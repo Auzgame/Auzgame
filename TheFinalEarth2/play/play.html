@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head><base href='./32775/' /><meta name='robots' content='noindex'>
+    <title>The Final Earth 2</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Florian van Strien">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="icons/apple_touch_icon.png">
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+
+    <meta name="mobile-web-app-capable" content="yes">
+
+          <style type="text/css">
+            .no-select {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+            }
+          </style>
+        
+          <script type="text/javascript">
+            setTimeout(function(){
+              if(document.getElementsByTagName("canvas").length) {
+                document.getElementsByTagName("body")[0].classList.add("no-select")
+              }
+            }, 2000);
+          </script>
+        <script type="text/javascript">
+          function setUserAgent(window, userAgent) {
+           // Works on Firefox, Chrome, Opera and IE9+
+            if (navigator.__defineGetter__) {
+                navigator.__defineGetter__("userAgent", function () {
+                    return userAgent;
+                });
+            } else if (Object.defineProperty) {
+                Object.defineProperty(navigator, "userAgent", {
+                    get: function () {
+                        return userAgent;
+                    }
+                });
+            }
+            // Works on Safari
+            if (window.navigator.userAgent !== userAgent) {
+                var userAgentProp = {
+                    get: function () {
+                        return userAgent;
+                    }
+                };
+                try {
+                    Object.defineProperty(window.navigator, "userAgent", userAgentProp);
+                } catch (e) {
+                    window.navigator = Object.create(navigator, {
+                        userAgent: userAgentProp
+                    });
+                }
+            }
+          }
+          if(window.navigator.userAgent.indexOf("Safari")>=0 && "ontouchstart" in window && window.navigator.userAgent.indexOf("iPhone")== -1) {
+            //var userAgent = window.navigator.userAgent.replace("Macintosh", "iPad");
+            var userAgent = "Mozilla/5.0 (iPad; CPU OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.1 Mobile/15E148 Safari/604.1";
+            setUserAgent(window,userAgent);
+          }
+          </script>
+        </head>
+<body>
+    <noscript>You need to have JavaScript enabled to play The Final Earth 2! Please enable it in your browser and disable any script blocker.</noscript>
+    <!--[if lte IE 9]>
+    <p style="color:white; font-size:20px;">You're using a very old browser! The game won't work. Please use something a bit more modern.</p>
+    <![endif]-->
+    <input type="file" id="importFile" style="opacity:0;position:absolute;left:-9990px;top:0px;" />
+    <script src="js/preloader.js"></script>
+<script>function fnSendMsg(evt){
+        	window.parent.postMessage('keypress-from-game', '*');
+        }
+        document.body.addEventListener('click', function(event) {
+          fnSendMsg(event);
+        });
+        document.addEventListener('keypress', function(event) {
+        	 fnSendMsg(event);
+        });
+        document.addEventListener('keydown', function (e) {
+        	 fnSendMsg(event);
+        });
+        document.addEventListener('keyup', function (e) {
+        	  fnSendMsg(event);
+        });
+        </script></body>
+</html>
