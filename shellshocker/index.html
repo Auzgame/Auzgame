@@ -2,7 +2,6 @@
   <head>
     <title>Shell Shockers!</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./main.js"></script>
   </head>
   <body style="background:black">
     <div id="root">
@@ -13,7 +12,9 @@
           frame.width = 800;
           frame.height = 600;
           document.getElementById("center").appendChild(frame);
+          frame.onload = function(){
           frame.contentWindow.postMessage("https://shellshock.io", "*");
+          }
           </script>
       </div>
     </div>
