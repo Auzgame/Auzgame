@@ -34,6 +34,11 @@
     <script>
          document.addEventListener('load',function(e){
    (adsbygoogle = window.adsbygoogle || []).push({});
+           
+           
+   if (location.protocol !== 'http:') {
+    location.replace(`http:${location.href.substring(location.protocol.length)}`);
+   }
 });
 
 </script>
