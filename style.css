@@ -32,6 +32,8 @@ h1{
  height: 200px;
 }
 .loader {
+  position: absolute;
+  left: 50%;
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
   border-radius: 50%;
