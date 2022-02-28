@@ -3,11 +3,22 @@
   <head>
     <title>Raft Wars 2!</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("raft-wars-2.swf");
+    });
+</script>
   </head>
   <body style="background:black">
     <div id="root">
       <div id="center">
-        <iframe src="./play/play.html" width="800" height="600"></iframe>
+        <div id="container"></div>
       </div>
     </div>
   </body>
