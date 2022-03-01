@@ -3,22 +3,24 @@
     <title>Run 3!</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    <script>
-    window.RufflePlayer = window.RufflePlayer || {};
-    window.addEventListener("load", (event) => {
-        const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
-        player.style.width = "800px";
-        player.style.height = "600px";
-        const container = document.getElementById("container");
-        container.appendChild(player);
-        player.load("game/run3.swf");
-    });
+    
 </script>
   </head>
   <body style="background:black">
     <div id="root">
-      <div id="container"></div>
+      <div id="container">
+        <object data="games/run3.swf" type="application/x-shockwave-flash"><param name="base" value=""><param name="wmode" value="direct"><param name="movie" value="games/run3.swf"><param name="menu" value="false"><param name="allowNetworking" value="internal"><param name="allowScriptAccess" value="never"><embed src="games/run3.swf" menu="false" allownetworking="internal" allowscriptaccess="never" type="application/x-shockwave-flash"></object> </div>
+          <script type="text/javascript">
+            function startGame() {
+                var isKizi = false;
+                if (isKizi)
+                    document.querySelector('#GameEmbedSWF').startGame();
+            }
+            function preload_complete() {
+                setTimeout(startGame, 1e3);
+            }
+        </script>
+      </div>
     </div>
   </body>
  </html>
