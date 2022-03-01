@@ -1,1 +1,24 @@
-
+<html>
+  <head>
+    <title>Raft Wars 2!</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        player.style.width = "800px";
+        player.style.height = "600px";
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("game/run3.swf");
+    });
+</script>
+  </head>
+  <body style="background:black">
+    <div id="root">
+      <div id="container"></div>
+    </div>
+  </body>
+ </html>
