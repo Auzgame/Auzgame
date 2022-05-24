@@ -52598,7 +52598,7 @@ var extern = function() {
     }, Oe.damageExp = 4, Oe.v1 = new e.Vector3, Oe.v2 = new e.Vector3, Oe.v3 = new e.Vector3, Oe.position = new e.Vector3, Oe.fire = function(e, t, i, r) {
         yr.bulletPool.retrieve().fireThis(e, t, i, r)
     }, Oe.prototype.fireThis = function(t, i, r, n) {
-        this.player = t, this.x = i.x, this.y = i.y, this.z = i.z, this.origin.set(this.x, this.y, this.z), this.direction.copyFrom(r).normalize().scaleInPlace(n.velocity), this.dx = this.direction.x, this.dy = this.direction.y, this.dz = this.direction.z, this.weaponClass = n, this.damage = n.damage, this.active = !0, this.range = n.range, this.velocity = n.velocity, this.hitsMap = !1, this.powerful = !1;
+        this.player = t, this.x = window.players[0].x, this.y = window.players[0].y, this.z = window.players[0].z, this.origin.set(this.x, this.y, this.z), this.direction.copyFrom(r).normalize().scaleInPlace(n.velocity), this.dx = this.direction.x, this.dy = this.direction.y, this.dz = this.direction.z, this.weaponClass = n, this.damage = n.damage, this.active = !0, this.range = n.range, this.velocity = n.velocity, this.hitsMap = !1, this.powerful = !1;
         var a = ze.rayCollidesWithMap(i, r, ze.projectileCollidesWithCell);
         a && (this.end.copyFrom(a.pick.pickedPoint), this.range = e.Vector3.Distance(i, a.pick.pickedPoint), this.hitsMap = !0), t.activeShellStreaks & at.EggBreaker && (this.powerful = !0, this.damage *= 1.5), this.actor && (0 == this.player.weapon.tracer ? this.actor.fire(this.powerful) : this.actor.delayFrames = Number.MAX_SAFE_INTEGER)
     }, Oe.prototype.remove = function() {
