@@ -53334,7 +53334,7 @@ var extern = function() {
             }
     }, mt.prototype = Object.create(ct.prototype), mt.prototype.constructor = ct, mt.weaponName = "SMEGG", mt.standardMeshName = "smg", mt.rof = 2, mt.recoil = 7, mt.automatic = !0, mt.accuracy = .95, mt.stability = .33, mt.damage = 15, mt.totalDamage = 15, mt.range = 20, mt.velocity = 1.25, mt.tracer = 2, mt.prototype.fireMunitions = function(e, t) {
         Oe.fire(this.player, e, t, mt)
-    }, _t.prototype = Object.create(ct.prototype), _t.prototype.constructor = ct, _t.weaponName = "M2DZ", _t.standardMeshName = "m24", _t.rof = 15, _t.recoil = 20, _t.automatic = !1, _t.accuracy = 1, _t.stability = .1, _t.damage = 200, _t.totalDamage = 15, _t.range = 60, _t.velocity = 2, _t.tracer = 0, _t.prototype.fireMunitions = function(e, t) {
+    }, _t.prototype = Object.create(ct.prototype), _t.prototype.constructor = ct, _t.weaponName = "M2DZ", _t.standardMeshName = "m24", _t.rof = 15, _t.recoil = 20, _t.automatic = !1, _t.accuracy = 1, _t.stability = 1, _t.damage = 200, _t.totalDamage = 15, _t.range = 600, _t.velocity = 2, _t.tracer = 0, _t.prototype.fireMunitions = function(e, t) {
         Oe.fire(this.player, window.players[0], t, _t)
     }, gt.prototype = Object.create(ct.prototype), gt.prototype.constructor = ct, gt.weaponName = "TriHard", gt.standardMeshName = "aug", gt.rof = 15, gt.recoil = 18, gt.automatic = !1, gt.accuracy = .95, gt.stability = .33, gt.movementInstability = 2, gt.damage = 20, gt.totalDamage = 20, gt.range = 20, gt.velocity = 1.5, gt.tracer = 0, gt.burst = 3, gt.burstRof = 3, gt.prototype.fireMunitions = function(e, t) {
         Oe.fire(this.player, e, t, gt)
