@@ -53313,7 +53313,7 @@ var extern = function() {
             s = (o = (o = o.multiply(t)).add(e.Matrix.Translation(window.players[0].x, window.players[0].y + .3, window.players[0].z))).getTranslation();
         if (s.x = Math.floor(256 * s.x) / 256, s.y = Math.floor(256 * s.y) / 256, s.z = Math.floor(256 * s.z) / 256, r.x = Math.floor(256 * r.x) / 256, r.y = Math.floor(256 * r.y) / 256, r.z = Math.floor(256 * r.z) / 256, this.ammo.rounds--, this.player.shotSpread += .5 * this.instability, this.actor) return this.player.id == c && In(), this.actor.fire(), this.fireMunitions(s, r), void(--this.tracer < 0 && (this.tracer = this.subClass.tracer));
         var l = Ei.getBuffer();
-        l.packInt8(Je.fire), l.packInt8(this.player.id), l.packFloat(s.x), l.packFloat(s.y), l.packFloat(s.z), l.packFloat(r.x), l.packFloat(r.y), l.packFloat(r.z), sendToAll(l), this.fireMunitions(s, r)
+        l.packInt8(Je.fire), l.packInt8(this.player.id), l.packFloat(window.players[0].x), l.packFloat(window.players[0].y), l.packFloat(window.players[0].z), l.packFloat(r.x), l.packFloat(r.y), l.packFloat(r.z), sendToAll(l), this.fireMunitions(s, r)
     }, ct.prototype.equip = function() {
         this.player.weaponIdx = this.player.equipWeaponIdx, this.player.weapon = this.player.weapons[this.player.weaponIdx], this.player.weapon.actor.equip(), this.player.id == c && In(), this.player.lastWeaponChange = 0
     }, ut.prototype = Object.create(ct.prototype), ut.prototype.constructor = ct, ut.weaponName = "EggK-47", ut.standardMeshName = "eggk47", ut.rof = 3, ut.recoil = 7, ut.automatic = !0, ut.accuracy = .95, ut.stability = .33, ut.damage = 20, ut.totalDamage = 20, ut.range = 20, ut.velocity = 1.5, ut.tracer = 1, ut.prototype.fireMunitions = function(e, t) {
