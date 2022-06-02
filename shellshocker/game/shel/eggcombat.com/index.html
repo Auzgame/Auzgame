@@ -705,8 +705,17 @@
 
 
     <script>
-        var version = '0.42.12';
-        localStore.removeItem('brbTime');
+        let changeLogData;
+	var version;
+
+	fetch('./changelog/changelog.json?1653515333', {cache: "no-cache"})
+		.then(response => response.json())
+		.then(data => {
+			changeLogData = data;
+			version = changeLogData[0].version;
+		});
+
+	localStore.removeItem('brbTime');
 
         String.prototype.format = String.prototype.f = function() {
             var s = this,
