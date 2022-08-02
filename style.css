@@ -73,3 +73,15 @@ h1{
   background-color: #04AA6D;
   color: white;
 }
+
+.dropdown-notification {
+   height: 40px;
+   line-height: 40px;
+   position: relative;
+   top: -40px;
+   transition: top .2s;
+   background: rgb(176,191,26);
+}
+.dropdown-notification.active {
+   top: 0;
+}
