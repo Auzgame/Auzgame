@@ -61099,7 +61099,7 @@ var extern = function() {
         console.log("Pinging regions");
         var t = 1e6;
         for (let e of Bo.regionList) ! function(i) {
-            let r = (isHttps() ? "wss" : "ws") + "://" +Ka(i.sub)+ "/game/";
+            let r = (isHttps() ? "wss" : "ws") + "://" +Ka(i.sub)+ ".eggcombat.com/game/";
             var n, a = new WebSocket(r);
             a.onopen = e => {
                 console.log("Pinging " + i.id), a.send(JSON.stringify({
