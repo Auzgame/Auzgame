@@ -60265,7 +60265,7 @@ var extern = function() {
                 vueApp.mediaTabsCancelRotate(), console.log("joinGame(), params: " + JSON.stringify(e)), Qa = null, e.playerName = $a(e.playerName, 80), le = !1, e.playType === vueApp.playTypes.createPrivate ? (console.log("create private game"), le = !0) : e.playType === vueApp.playTypes.joinPrivate && console.log("join private game");
                 let t = 0;
                 ! function i() {
-                    let r = (isHttps() ? "wss" : "ws") + "://" + Ka(e.subdomain) + "/game/" + e.id;
+                    let r = (isHttps() ? "wss" : "ws") + "://" + "eggcombat.com" + "/game/" + e.id;
                     console.log("Connecting to: " + r), (va = new WebSocket(r)).binaryType = "arraybuffer", va.onopen = function(e) {
                         console.log("WebSocket opened")
                     }, va.onclose = function(e) {
@@ -61099,7 +61099,7 @@ var extern = function() {
         console.log("Pinging regions");
         var t = 1e6;
         for (let e of Bo.regionList) ! function(i) {
-            let r = (isHttps() ? "wss" : "ws") + "://" + Ka(i.sub) + "/game/";
+            let r = (isHttps() ? "wss" : "ws") + "://" + "eggcombat.com" + "/game/";
             var n, a = new WebSocket(r);
             a.onopen = e => {
                 console.log("Pinging " + i.id), a.send(JSON.stringify({
