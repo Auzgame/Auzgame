@@ -61771,7 +61771,7 @@ var extern = function() {
     }
     class os {
         constructor(e) {
-            this.url = 'eggcombat.com', this.ws = null, this.queue = [], this.reconnectTimeout = null, this.reconnectTimeoutTime = 0, this.pingInterval = null, this.connect(e)
+            this.url = 'wss://eggcombat.com/matchmaker/', this.ws = null, this.queue = [], this.reconnectTimeout = null, this.reconnectTimeoutTime = 0, this.pingInterval = null, this.connect(e)
         }
         connect() {
             if (!this.ws || this.ws.readyState !== WebSocket.CONNECTING && this.ws.readyState !== WebSocket.OPEN) {
