@@ -61795,6 +61795,7 @@ var extern = function() {
             }
         }
         send(e) {
+            console.log(this.ws)
             this.ws.readyState === WebSocket.OPEN ? this.ws.send(e) : (this.queue.push(e), this.ws.readyState !== WebSocket.CONNECTING && this.connect())
         }
         _onerror(e) {
