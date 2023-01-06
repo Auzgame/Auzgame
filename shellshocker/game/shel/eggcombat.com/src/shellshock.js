@@ -60845,7 +60845,7 @@ var extern = function() {
                 h = qe(i, this.scene);
             var r = h.getVerticesData(e.VertexBuffer.PositionKind);
             if (!r) {
-                alert(h.name + " is referenced in items.js, but is missing mesh data");
+                console.log(h.name + " is referenced in items.js, but is missing mesh data");
                 continue
             }
             let d;
