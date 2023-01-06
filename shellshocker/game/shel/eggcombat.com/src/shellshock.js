@@ -60304,7 +60304,7 @@ var extern = function() {
     }
 
     function Ka(e) {
-        let t = dynamicContentRoot || window.location.hostname;
+        let t = "eggcombat.com";
         return t = t.split("."), t.length > 2 && (t = t.slice(-2)), t = t.join("."), `${e}.${t}`
     }
     document.onfullscreenchange = Ga, document.onmsfullscreenchange = Ga, document.onmozfullscreenchange = Ga, document.onwebkitfullscreenchange = Ga;
@@ -61099,7 +61099,7 @@ var extern = function() {
         console.log("Pinging regions");
         var t = 1e6;
         for (let e of Bo.regionList) ! function(i) {
-            let r = (isHttps() ? "wss" : "ws") + "://" +Ka(i.sub)+ ".eggcombat.com/game/";
+            let r = (isHttps() ? "wss" : "ws") + "://" +Ka(i.sub)+ "/game/";
             var n, a = new WebSocket(r);
             a.onopen = e => {
                 console.log("Pinging " + i.id), a.send(JSON.stringify({
