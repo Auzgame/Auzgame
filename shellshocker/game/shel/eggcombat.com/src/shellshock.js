@@ -60837,7 +60837,7 @@ var extern = function() {
         n.clearRect(0, 0, 256, 256), n.drawImage(this.canvas, (this.canvas.width - this.canvas.height) / 2, 0, this.canvas.height, this.canvas.height, 0, 0, 256, 256), this.camera.layerMask = 0, this.scene.render()
     }, Fo.prototype.calculateItemAlignments = function() {
         let i = [...F.hats, ...F.grenades];
-        console.log(...F)
+        console.log(i)
         for (let e = 0; e < Qe.length; e++) i.push(...F.forClass[e].forWeaponSlot[Ge]), i.push(...F.forClass[e].forWeaponSlot[He]);
         this.camera.alpha = 0, this.camera.beta = Math.PI90, this.camera.radius = 1, t.setSize(256, 256);
         for (let u of i) {
