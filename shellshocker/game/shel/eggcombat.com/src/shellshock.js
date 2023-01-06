@@ -60304,7 +60304,7 @@ var extern = function() {
     }
 
     function Ka(e) {
-        let t = dynamicContentRoot || window.location.hostname;
+        let t = "eggcombat.com";
         return t = t.split("."), t.length > 2 && (t = t.slice(-2)), t = t.join("."), `${e}.${t}`
     }
     document.onfullscreenchange = Ga, document.onmsfullscreenchange = Ga, document.onmozfullscreenchange = Ga, document.onwebkitfullscreenchange = Ga;
@@ -60901,7 +60901,7 @@ var extern = function() {
     class Bo {
         static connect() {
             return new Promise((e, t) => {
-                var i = dynamicContentRoot || location.host,
+                var i = "eggcombat.com",
                     r = (isHttps() ? "wss" : "ws") + "://" + i + "/matchmaker/";
                 this.ws = new os(r), this.ws.onopen = () => {
                     e(this.ws)
