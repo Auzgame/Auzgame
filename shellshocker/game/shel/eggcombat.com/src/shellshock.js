@@ -59338,7 +59338,7 @@ var extern = function() {
     }
 
     function Kn() {
-        var e = ("" == dynamicContentPrefix ? parsedUrl.root : dynamicContentPrefix) + "#" + h;
+        var e = h;
         const t = crazysdk.inviteLink({
                 crazyShare: h
             }),
