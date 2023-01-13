@@ -90,6 +90,7 @@ ul {
   display: grid;
   width: 50%;
   margin: 0 auto;
+  padding: unset;
 }
 
 li{
