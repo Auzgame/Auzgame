@@ -85,3 +85,38 @@ h1{
 .dropdown-notification.active {
    top: 0;
 }
+
+ul {
+  display: grid;
+  width: 50%;
+  margin: 0 auto;
+}
+
+li{
+  margin: 20px;
+  width: 250px;
+  height: 200px;
+  display: inline-grid;
+  background-color: #ddd;
+  position: relative;
+}
+
+.gameImg{
+  top: 0;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  margin: auto;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color:#000000;
+  margin: none;
+}
