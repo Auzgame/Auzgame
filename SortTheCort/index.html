@@ -32,6 +32,11 @@
 </head>
 
 <body class="template">
+    <div>
+            <a class="game" href=""><img src="" width="20%" height="20%"></a>
+            <a href="//auzgame.rf.gd"><img src="../logo.png" width="20%" height="20%"></a>
+            <a class="game" href=""><img src="" height="20%" width="20%"></a>
+    </div>
     <h1> Please wait for the game to load. If you experience any issues please contact me!</h1>
     <div class="template-wrap clear">
         <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="540px" width="960px"></canvas>
@@ -52,7 +57,23 @@
         };
     </script>
     <script src="Release/UnityLoader.js"></script>
-
+ <script>
+      let xml = new XMLHttpRequest();
+      xml.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+             // Typical action to be performed when the document is ready:
+             console.log(xml.responseText.split(/\r?\n/));
+              let games = xml.responseText.split(/\r?\n/);
+              for(var i=0;i<document.querySelectorAll(".game").length;i++){
+                  let currentGame = games[Math.floor(Math.random() * games.length)]
+                  document.querySelectorAll(".game")[i].href = currentGame.split('"')[3];
+                  document.querySelectorAll(".game")[i].children[0].src = "/Image/"+currentGame.split('"')[5];
+              }
+          }
+      };
+      xml.open("GET","https://raw.githubusercontent.com/Auzgame/Auzgame/main/games.txt", true)
+      xml.send();
+    </script>
 </body>
 
 </html>
