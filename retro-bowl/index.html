@@ -79,6 +79,11 @@
 </head>
 
 <body>
+    <div>
+            <a class="game" href=""><img src="" width="20%" height="20%"></a>
+            <a href="//auzgame.rf.gd"><img src="../logo.png" width="20%" height="20%"></a>
+            <a class="game" href=""><img src="" height="20%" width="20%"></a>
+         </div>
     <div class="gm4html5_div_class" id="gm4html5_div_id">
         <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" alt="GameMaker:HTML5 loading screen" style="display:none;" />
         <!-- Create the canvas element the game draws to -->
@@ -92,6 +97,23 @@
     <script type="text/javascript" src="html5game/RetroBowl.js?ILABC=1551937871"></script>
     <script>
         window.onload = GameMaker_Init;
+    </script>
+    <script>
+      let xml = new XMLHttpRequest();
+      xml.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+             // Typical action to be performed when the document is ready:
+             console.log(xml.responseText.split(/\r?\n/));
+              let games = xml.responseText.split(/\r?\n/);
+              for(var i=0;i<document.querySelectorAll(".game").length;i++){
+                  let currentGame = games[Math.floor(Math.random() * games.length)]
+                  document.querySelectorAll(".game")[i].href = currentGame.split('"')[3];
+                  document.querySelectorAll(".game")[i].children[0].src = "/Image/"+currentGame.split('"')[5];
+              }
+          }
+      };
+      xml.open("GET","https://raw.githubusercontent.com/Auzgame/Auzgame/main/games.txt", true)
+      xml.send();
     </script>
 </body>
 
