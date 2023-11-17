@@ -11,3 +11,4 @@
 "Subway Surfers" "/Subway-Surfers" "SubwaySurfers.png"
 "The Final Earth 2" "/TheFinalEarth2" "FinalEarth.png"
 "Vex3" "/Vex3" "vex3.png"
+"Trimps" "/Trimps" "TrimpImg.png"
