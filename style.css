@@ -15,6 +15,7 @@ body{
 h1{
   text-align:center;
   color: white;
+  font-family: 'Kdam Thmor Pro', sans-serif;
 }
 .whiteText{
   color: white;
@@ -120,4 +121,5 @@ a {
 p {
   color:#000000;
   margin: none;
+  font-family: 'Kdam Thmor Pro', sans-serif;
 }
