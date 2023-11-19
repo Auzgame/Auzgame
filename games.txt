@@ -12,3 +12,4 @@
 "The Final Earth 2" "/TheFinalEarth2" "FinalEarth.png"
 "Vex3" "/Vex3" "vex3.png"
 "Trimps" "/Trimps" "TrimpImg.png"
+"Learn to Fly 3" "/LTF3" "LTF3.png"
