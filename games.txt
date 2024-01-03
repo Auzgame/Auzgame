@@ -13,3 +13,4 @@
 "Vex3" "/Vex3" "vex3.png"
 "Trimps" "/Trimps" "TrimpImg.png"
 "Learn to Fly 3" "/LTF3" "LTF3.png"
+"Eagler Craft" "/EaglercraftX" "EaglercraftX.png"
