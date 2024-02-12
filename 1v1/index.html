@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta name="keywords" content="auzgame,1v1,1v1.lol,unblocked 1v1, 1v1.lol unblocked, 1v1 unblocked, 1v1.lol unblocked">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WBJJGL9F0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8WBJJGL9F0');
+    </script>
+    <title>1v1.lol</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body style="background:black">
+    <div id="root">
+      <div id="center" align="center">
+         <div>
+            <a class="game" href=""><img src="" width="20%" height="20%"></a>
+            <a href="//auzgame.rf.gd"><img src="../logo.png" width="20%" height="20%"></a>
+            <a class="game" href=""><img src="" height="20%" width="20%"></a>
+         </div>
+        <p style="color:white"> I got a lot of requests for this one. Here you guys go.</p>
+        <iframe src="./game/1v1.lol/index.html" width="100%" height="800"></iframe>
+      </div>
+    </div>
+    <script>
+      let xml = new XMLHttpRequest();
+      xml.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+             // Typical action to be performed when the document is ready:
+             console.log(xml.responseText.split(/\r?\n/));
+              let games = xml.responseText.split(/\r?\n/);
+              for(var i=0;i<document.querySelectorAll(".game").length;i++){
+                  let currentGame = games[Math.floor(Math.random() * games.length)]
+                  document.querySelectorAll(".game")[i].href = currentGame.split('"')[3];
+                  document.querySelectorAll(".game")[i].children[0].src = "/Image/"+currentGame.split('"')[5];
+              }
+          }
+      };
+      xml.open("GET","https://raw.githubusercontent.com/Auzgame/Auzgame/main/games.txt", true)
+      xml.send();
+    </script>
+  </body>
+ </html>
