@@ -15,3 +15,4 @@
 "Learn to Fly 3" "/LTF3" "LTF3.png"
 "Eagler Craft" "/EaglercraftX" "EaglercraftX.png"
 "1v1.lol" "/1v1" "1v1.png"
+"Bad Time Simulator" "/BadTimeSimulator" "BadTimeSimulator.png"
