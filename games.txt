@@ -16,3 +16,4 @@
 "Eagler Craft" "/EaglercraftX" "EaglercraftX.png"
 "1v1.lol" "/1v1" "1v1.png"
 "Bad Time Simulator" "/BadTimeSimulator" "BadTimeSimulator.png"
+"Hardware Tycoon" "/HardwareTycoon" "HardwareTycoon.png"
