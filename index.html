@@ -75,29 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <script async="async" data-cfasync="false" src="//ophoacit.com/1?z=5921939"></script>
         </div>
       <div id="container" class="col-sm-4">
-        <ul class="centerA">
-            <li><a id="ShellShocker" href="/shellshocker/"><img src="Image/shellshocker.png" class="gameImg"></a></li>
-            <li><a id="1v1" href="/1v1/"><img src="Image/1v1.png" class="gameImg"></a></li>
-	          <li><a id="BadTimeSimulator" href="/BadTimeSimulator/"><img src="Image/BadTimeSimulator.png" class="gameImg"></a></li>
-            <li><a id="HardwareTycoon" href="/HardwareTycoon/"><img src="Image/HardwareTycoon.png" class="gameImg"></a></li>
-            <li><a id="SubwaySurfers" href="/Subway-Surfers/"><img src="Image/SubwaySurfers.png" class="gameImg"></a></li>
-            <li><a id="EaglercraftX" href="/EaglercraftX/"><img src="Image/EaglercraftX.png" class="gameImg"></a></li>
-            <li><a id="LTF3" href="/LTF3/"><img src="Image/LTF3.png" class="gameImg"></a></li>
-            <li><a id="TheFinalEarth2" href="/TheFinalEarth2/"><img src="Image/FinalEarth.png" class="gameImg"></a></li>
-            <li><a id="Trimps" href="/Trimps/"><img src="Image/TrimpImg.png" class="gameImg"></a></li>
-            <li><a id="SortTheCort" href="/SortTheCort/"><img src="Image/SortTheCort.png" class="gameImg"></a></li>
-            <li><a id="RetroBowl" href="/retro-bowl/"><img src="Image/retro-bowl.png" class="gameImg"></a></li>
-            <li><a id="Proxy" href="/Proxy/" class="centerA"><img src="Image/proxy.png" class="gameImg"></a></li>
-            <li><a id="Breakout" href="/Breakout/" class="centerA"><img src="Image/idlebreakout.png" class="gameImg"></a></li>
-            <li><a id="Run3" href="/run3/" class="centerA"><img src="Image/run3.jpeg" class="gameImg"></a></li>    
-            <li><a id="RaftWars2" href="/RaftWars2/" class="centerA"><img src="Image/RaftWars2.png" class="gameImg"></a></li>
-            <li><a id="Vex3" href="/Vex3/" class="centerA"><img src="/Image/vex3.png" class="gameImg"></a></li>
-            <li><a id="Cookie" href="/Cookie-Clicker" class="centerA"><img src="Image/Cookie.png" class="gameImg"></a></li>
-            <li><a id="burritoBison" href="/burrito" class="centerA"><img src="Image/burritoBison.jpg" class="gameImg"></a></li>
-            <li><a id="MiniMetroLondon" href="/mini-metro-london" class="centerA"><img src="Image/minimetro.png" class="gameImg"></a></a>
-            <li><a id="StrategyGame" href="/StrategyGame" class="centerA"><img src="Image/StrategyGame.png" class="gameImg"></a></li>
-            <li><a id="RoofTopSnipers" href="/rooftopsnipers" class="centerA"><img src="Image/RoofTopSnipers.png" class="gameImg"></a></li>
-          </ul> 
+        <ul class="centerA"></ul> 
          </div>
          <div class="col-sm-4">
          
@@ -116,5 +94,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var infolinks_wsid = 0;
   </script>
   <script type="text/javascript" src="https://resources.infolinks.com/js/infolinks_main.js"></script>
-  
+  <script type="text/javascript">
+    let xml = new XMLHttpRequest();
+    xml.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            console.log(xml.responseText.split(/\r?\n/));
+            let games = xml.responseText.split(/\r?\n/);
+            for(var i=0;i<games.length;i++){
+              let currentGame = games[i]   
+
+              let li = document.createElement("li");
+              let a = document.createElement("a");
+              let img = document.createElement("img");
+
+              a.id = currentGame.split('"')[1];
+              a.href = currentGame.split('"')[3];
+
+              img.src = "Image/"+currentGame.split('"')[5];
+              img.classList.add("gameImg")
+
+              a.appendChild(img);
+              li.appendChild(a);
+
+              document.querySelectorAll("ul.centerA")[0].appendChild(li);
+
+            }
+        }
+    };
+    xml.open("GET","https://raw.githubusercontent.com/Auzgame/Auzgame/main/games.txt", true)
+    xml.send();
+  </script>
 </body>
