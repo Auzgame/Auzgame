@@ -1,4 +1,4 @@
-"Shellshockers" "/shellshockers" "shellshocker.png"
+"Shellshockers" "/shellshocker" "shellshocker.png"
 "1v1.lol" "/1v1" "1v1.png"
 "Drive Mad!" "/DriveMad" "DriveMad.png"
 "Bad Time Simulator" "/BadTimeSimulator" "BadTimeSimulator.png"
