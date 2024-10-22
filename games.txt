@@ -16,5 +16,5 @@
 "Mini Metro London" "/mini-metro-london" "minimetro.png"
 "Raft Wars 2" "/RaftWars2" "RaftWars2.png"
 "Roof Top Snipers" "/rooftopsnipers" "RoofTopSnipers.png"
-"Sort The Court" "/SortTheCourt" "SortTheCort.png"
+"Sort The Court" "/SortTheCort" "SortTheCort.png"
 "Vex3" "/Vex3" "vex3.png"
