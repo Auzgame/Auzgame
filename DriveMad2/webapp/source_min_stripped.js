@@ -692,7 +692,7 @@ function stopContextMenu(event) {
 var Module = {
   locateFile: function (path, prefix) {
     if (prefix == "") {
-      return "/webapp/" + path;
+      return "./webapp/" + path;
     }
     return prefix + path;
   },
@@ -857,8 +857,8 @@ function webViewOpen(path) {
     let arr = readLocalFile(path);
     let html = new TextDecoder("utf-8").decode(arr);
     let betaStr = window.location.href.endsWith('/beta') ? '_beta' : '';
-    html = html.replace("common.js", `webapp/view_common${betaStr}.js`);
-    html = html.replace("common.css", `webapp/view_common${betaStr}.css`);
+    html = html.replace("common.js", `./webapp/view_common${betaStr}.js`);
+    html = html.replace("common.css", `./webapp/view_common${betaStr}.css`);
     if (webViewIframe == null) {
       window.onmessage = function (e) {
         if (typeof e.data !== 'string') {
@@ -1004,9 +1004,9 @@ function showShareFileModal(path, text, guid) {
     linkP.innerHTML = `<input id="share_url_input" type="url" size="${url.length}" readonly="" value="${url}" ><a class="button" id="copy_button" href="#" onclick="copyTextFromElement('share_url_input'); return false;">Copy</a>`;
     var shareP = document.createElement("p");
     shareModalContent.appendChild(shareP);
-    shareP.innerHTML = `<span class='link_image_button'><a href='${`https://twitter.com/intent/tweet?url=${urlEncoded}`}' target='_blank'><img src='/webapp/twitter.png' width='${45}' height='${45}' alt='Tweet on Twitter' /></a></span>
+    shareP.innerHTML = `<span class='link_image_button'><a href='${`https://twitter.com/intent/tweet?url=${urlEncoded}`}' target='_blank'><img src='./webapp/twitter.png' width='${45}' height='${45}' alt='Tweet on Twitter' /></a></span>
       <span class='link_image_button'><a href='${`https://www.facebook.com/dialog/share?app_id=349793526803234&display=popup&href=${urlEncoded}`}' target='_blank'><img src='/webapp/facebook.png' width='${45}' height='${45}' alt='Share on Facebook' /></a></span>
-      <span class='link_image_button'><a href='${"https://discord.gg/P8VHwVq"}' target='_blank'><img src='/webapp/discord.png' width='${45}' height='${45}' alt='Discuss on Discord' /></a></span>`;
+      <span class='link_image_button'><a href='${"https://discord.gg/P8VHwVq"}' target='_blank'><img src='./webapp/discord.png' width='${45}' height='${45}' alt='Discuss on Discord' /></a></span>`;
   }
   shareFileClickCallback = event => {
     if (event.target == modal || event.target == closeButton) {
@@ -1030,7 +1030,7 @@ function showStoreLinkModal(text, callbackId, showAppStoreButtons, showExitButto
   let html = `<p class="store_modal_text">${text}</p>`;
   if (showAppStoreButtons) {
     html += `<p class="store_modal_text">Get the full experience by downloading Fancade from Play Store or App Store!</p>
-    <div class='center'><a href='https://apps.apple.com/us/app/fancade/id1280404080' target='_blank'><img src='/webapp/appstore.png' alt='App Store' width='${as_img_w}' height='${img_h}'></a>&nbsp;<a href='https://play.google.com/store/apps/details?id=com.martinmagni.fancade' target='_blank'><img src='/webapp/playstore.png' alt='Play Store' width='${ps_img_w}' height='${img_h}' ></a></div>`;
+    <div class='center'><a href='https://apps.apple.com/us/app/fancade/id1280404080' target='_blank'><img src='./webapp/appstore.png' alt='App Store' width='${as_img_w}' height='${img_h}'></a>&nbsp;<a href='https://play.google.com/store/apps/details?id=com.martinmagni.fancade' target='_blank'><img src='./webapp/playstore.png' alt='Play Store' width='${ps_img_w}' height='${img_h}' ></a></div>`;
   }
   if (showExitButtons) {
     html += `<div class='center' ><a class='overlay_button' href='https://play.fancade.com' >Yes</a><a class='overlay_button' href='' onclick='return false;' >No</a></div>`;
