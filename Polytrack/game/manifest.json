@@ -1,0 +1,46 @@
+{
+    "name": "CrazyGames",
+    "short_name": "CrazyGames",
+    "icons": [
+        {
+            "src": "https://imgs.crazygames.com/favicons/manifest-icon-3.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=192&h=192",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any"
+        },
+        {
+            "src": "https://imgs.crazygames.com/favicons/manifest-icon-3.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=512&h=512",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
+        {
+            "src": "https://imgs.crazygames.com/favicons/manifest-icon-3.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=192&h=192",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "https://imgs.crazygames.com/favicons/manifest-icon-3.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=512&h=512",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        }
+    ],
+    "id": "/pwa/",
+    "start_url": "/",
+    "scope": "/",
+    "background_color": "#0C0D14",
+    "display": "standalone",
+    "theme_color": "#3c1e6e",
+    "categories": [
+        "games",
+        "entertainment"
+    ],
+    "related_applications": [
+        {
+            "platform": "webapp",
+            "url": "https://www.crazygames.com/manifest"
+        }
+    ]
+}
