@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta name="keywords" content="auzgame, Polytrack, html5, unblocked games, Fancade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WBJJGL9F0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8WBJJGL9F0');
+    </script>
+    <title>Monkeymart</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="canonical" href="https://www.auzgame.rf.gd/Fancade">
+  </head>
+  <body style="background:black">
+    <div id="root">
+      <div id="center" align="center">
+         <div>
+            <a class="game" href=""><img src="" width="20%" height="20%"></a>
+            <a href="/"><img src="../logo.png" width="20%" height="20%"></a>
+            <a class="game" href=""><img src="" height="20%" width="20%"></a>
+         </div>
+        <iframe src="./game/index.html" width="75%" height="80%"></iframe>
+      </div>
+    </div>
+    <script>
+      let xml = new XMLHttpRequest();
+      xml.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+             // Typical action to be performed when the document is ready:
+             console.log(xml.responseText.split(/\r?\n/));
+              let games = xml.responseText.split(/\r?\n/);
+              for(var i=0;i<document.querySelectorAll(".game").length;i++){
+                  let currentGame = games[Math.floor(Math.random() * games.length)]
+                  document.querySelectorAll(".game")[i].href = currentGame.split('"')[3];
+                  document.querySelectorAll(".game")[i].children[0].src = "/Image/"+currentGame.split('"')[5];
+              }
+          }
+      };
+      xml.open("GET","https://raw.githubusercontent.com/Auzgame/Auzgame/main/games.txt", true)
+      xml.send();
+    </script>
+	<script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9392602,document.createElement('script'))</script>
+  </body>
+ </html>
