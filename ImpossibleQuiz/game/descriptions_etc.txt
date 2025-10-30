@@ -1,0 +1,8 @@
+Dimensions: 700 x 500 px
+Developer: Martijn Kunst, Bigdino.com
+
+description:
+Infiltrate a waterpark, fight your way past security and find back your treasure.
+
+instructions:
+Use your MOUSE to aim and fire. Make sure to upgrade your raft and armor before the final battles. 

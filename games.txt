@@ -7,6 +7,7 @@
 "Drive Mad!" "/DriveMad" "DriveMad.png"
 "Perfect Drive!" "/perfect-drive" "perfect-drive.png"
 "Night City Racing!" "/night-city-racing" "night-city-racing.png"
+"Impossible Quiz" "/impossiblequiz" "ImpossibleQuiz.png"
 "Bad Time Simulator" "/BadTimeSimulator" "BadTimeSimulator.png"
 "Hardware Tycoon" "/HardwareTycoon" "HardwareTycoon.png"
 "Subway Surfers" "/Subway-Surfers" "SubwaySurfers.png"
